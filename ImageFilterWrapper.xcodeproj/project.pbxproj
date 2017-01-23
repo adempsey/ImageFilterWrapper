@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8DD83DB51E33F4EF00395402 /* ImageFilterWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DD83DBC1E33F5ED00395402 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DBB1E33F5ED00395402 /* Filter.swift */; };
+		8DD83DBE1E33F60F00395402 /* Subfilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DBD1E33F60F00395402 /* Subfilter.swift */; };
+		8DD83DC11E33FA4B00395402 /* BlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DC01E33FA4B00395402 /* BlurFilter.swift */; };
+		8DD83DC31E33FB6900395402 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DC21E33FB6900395402 /* Options.swift */; };
+		8DD83DC71E3473F300395402 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DC61E3473F300395402 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageFilterWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFilterWrapper.h; sourceTree = "<group>"; };
 		8DD83DB41E33F4EF00395402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD83DBB1E33F5ED00395402 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		8DD83DBD1E33F60F00395402 /* Subfilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subfilter.swift; sourceTree = "<group>"; };
+		8DD83DC01E33FA4B00395402 /* BlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurFilter.swift; sourceTree = "<group>"; };
+		8DD83DC21E33FB6900395402 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		8DD83DC61E3473F300395402 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +56,23 @@
 		8DD83DB21E33F4EF00395402 /* ImageFilterWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				8DD83DBB1E33F5ED00395402 /* Filter.swift */,
+				8DD83DC61E3473F300395402 /* Image.swift */,
 				8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */,
+				8DD83DC21E33FB6900395402 /* Options.swift */,
+				8DD83DBD1E33F60F00395402 /* Subfilter.swift */,
+				8DD83DBF1E33F93B00395402 /* Subfilters */,
 				8DD83DB41E33F4EF00395402 /* Info.plist */,
 			);
 			path = ImageFilterWrapper;
+			sourceTree = "<group>";
+		};
+		8DD83DBF1E33F93B00395402 /* Subfilters */ = {
+			isa = PBXGroup;
+			children = (
+				8DD83DC01E33FA4B00395402 /* BlurFilter.swift */,
+			);
+			path = Subfilters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +118,7 @@
 				TargetAttributes = {
 					8DD83DAF1E33F4EF00395402 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD83DC31E33FB6900395402 /* Options.swift in Sources */,
+				8DD83DBE1E33F60F00395402 /* Subfilter.swift in Sources */,
+				8DD83DBC1E33F5ED00395402 /* Filter.swift in Sources */,
+				8DD83DC11E33FA4B00395402 /* BlurFilter.swift in Sources */,
+				8DD83DC71E3473F300395402 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +268,7 @@
 		8DD83DB91E33F4EF00395402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -250,6 +280,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dempsey.ImageFilterWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -257,6 +288,7 @@
 		8DD83DBA1E33F4EF00395402 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
