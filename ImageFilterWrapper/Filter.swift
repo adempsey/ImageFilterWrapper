@@ -13,12 +13,20 @@ public enum ImageFilter {
      */
     case Blur(BlurFilter)
 
+    /**
+     A filter that sharpens images, increasing the contrast between the edges in an image.
+     */
+    case Sharpen(SharpenFilter)
+
     internal var subfilter: Subfilter {
         switch self {
         case let .Blur(subfilter):
             return subfilter
+        case let .Sharpen(subfilter):
+            return subfilter
         }
     }
+
 
 }
 

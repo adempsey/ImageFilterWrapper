@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D3ACA741E3726FA00B3A482 /* CoreImageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3ACA731E3726FA00B3A482 /* CoreImageConvertible.swift */; };
+		8D5B9EF01E37401F00767C2A /* SharpenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */; };
 		8DD83DB51E33F4EF00395402 /* ImageFilterWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DD83DBC1E33F5ED00395402 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DBB1E33F5ED00395402 /* Filter.swift */; };
 		8DD83DBE1E33F60F00395402 /* Subfilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DBD1E33F60F00395402 /* Subfilter.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		8D3ACA731E3726FA00B3A482 /* CoreImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageConvertible.swift; sourceTree = "<group>"; };
+		8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpenFilter.swift; sourceTree = "<group>"; };
 		8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageFilterWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFilterWrapper.h; sourceTree = "<group>"; };
 		8DD83DB41E33F4EF00395402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD83DC01E33FA4B00395402 /* BlurFilter.swift */,
+				8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */,
 			);
 			path = Subfilters;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				8DD83DBE1E33F60F00395402 /* Subfilter.swift in Sources */,
 				8D3ACA741E3726FA00B3A482 /* CoreImageConvertible.swift in Sources */,
 				8DD83DBC1E33F5ED00395402 /* Filter.swift in Sources */,
+				8D5B9EF01E37401F00767C2A /* SharpenFilter.swift in Sources */,
 				8DD83DC11E33FA4B00395402 /* BlurFilter.swift in Sources */,
 				8DD83DC71E3473F300395402 /* Image.swift in Sources */,
 			);
