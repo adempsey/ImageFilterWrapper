@@ -6,14 +6,72 @@
 //  Copyright © 2017 dempsey. All rights reserved.
 //
 
+/**
+ A filter that softens images, decreasing the contrast between the edges in an image.
+ Possible filters and options are:
+
+ ````
+ case Box(radius: Float?)
+ case Disc(radius: Float?)
+ case Gaussian(radius: Float?)
+ case MaskedVariable(mask: UIImage?, radius: Float?)
+ case MedianFilter
+ case Motion(radius: Float?, angle: Float?)
+ case NoiseReduction(noiseLevel: Float?, sharpness: Float?)
+ case Zoom(center: CGPoint?, amount: Float?)
+ ````
+ */
 public enum BlurFilter {
+
+    /**
+     Blurs an image using a box-shaped convolution kernel.
+     */
     case Box(radius: Float?)
+
+    /**
+     Blurs an image using a disc-shaped convolution kernel.
+     */
     case Disc(radius: Float?)
+
+    /**
+     Spreads source pixels by an amount specified by a Gaussian distribution.
+     */
     case Gaussian(radius: Float?)
+
+    /**
+     Blurs the source image according to the brightness levels in a mask image.
+
+     Shades of gray in the mask image vary the blur radius from zero (where the mask image is black)
+     to the radius specified in the `radius` parameter (where the mask image is white).
+     */
     case MaskedVariable(mask: UIImage?, radius: Float?)
+
+    /**
+     Computes the median value for a group of neighboring pixels and replaces each pixel value with
+     the median.
+
+     The effect is to reduce noise.
+     */
     case MedianFilter
+
+    /**
+     Blurs an image to simulate the effect of using a camera that moves a specified angle and
+     distance while captuing the image.
+     */
     case Motion(radius: Float?, angle: Float?)
+
+    /**
+     Reduces noise using a threshold value to define what is considered noise.
+
+     Small changes in luminance below that value are considered noise and get a noise reduction
+     treatment, which is a local blur. Changes above the threshold value are considered edges, so
+     they are sharpened.
+     */
     case NoiseReduction(noiseLevel: Float?, sharpness: Float?)
+
+    /**
+     Simulates the effect of zooming the camera while capturing the image.
+     */
     case Zoom(center: CGPoint?, amount: Float?)
 }
 
