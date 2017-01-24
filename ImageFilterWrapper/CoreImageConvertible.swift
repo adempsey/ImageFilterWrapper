@@ -6,6 +6,10 @@
 //  Copyright © 2017 dempsey. All rights reserved.
 //
 
+/**
+ Creates a common protocol for transforming data structures into formats that can be directly
+ consumed by core image filter APIs.
+ */
 internal protocol CoreImageConvertible {
 
     func coreImageFormat() -> NSObject

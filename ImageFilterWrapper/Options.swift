@@ -6,6 +6,9 @@
 //  Copyright © 2017 dempsey. All rights reserved.
 //
 
+/**
+ Defines a set of option keys that can be used to configure image filter parameters.
+ */
 internal enum FilterOption: String {
     case AcuteAngle = "inputAcuteAngle"
     case AlphaCoefficients = "inputAlphaCoefficients"

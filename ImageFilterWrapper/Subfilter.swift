@@ -42,7 +42,7 @@ extension SubfilterError: LocalizedError {
         switch self {
         case let .InvalidFilterKey(key):
             return NSLocalizedString("No existing filter matches key \(key)",
-                comment: "Error: message to inform developer that the provided image filter key does not correspond to an existing filter")
+                comment: "Error: message to inform developer that a provided image filter key does not correspond to an existing filter")
         case .InvalidOutput:
             return NSLocalizedString("Failed to generate filtered image",
                                      comment: "Error: message to inform developer that the filtered image was unable to be produced")
