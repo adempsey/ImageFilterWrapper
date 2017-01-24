@@ -8,6 +8,13 @@
 
 public extension UIImage {
 
+    /**
+     Applies a set of configured `ImageFilter` objects to an image.
+
+     - Parameter filters: The set of image filters to apply to the image. Filters are applied
+     in provided order.
+     - Returns: A new UIImage object that is a copy of the original image with filters applied.
+     */
     public func applyFilters(_ filters: ImageFilter...) -> UIImage {
         guard var coreImage: CIImage = CIImage(image: self) else {
             return self
