@@ -8,19 +8,19 @@
 
 internal protocol Subfilter {
     var key: String { get }
-    func setOptions(filter: inout CIFilter)
+    func setFilterOptions(filter: inout CIFilter)
 }
 
 internal extension Subfilter {
 
-    func applyTo(image: CIImage) throws -> CIImage {
+    func applyFilter(toImage image: CIImage) throws -> CIImage {
         guard var filter: CIFilter = CIFilter(name: self.key) else {
             throw SubfilterError.InvalidFilterKey(self.key)
         }
 
         filter.setDefaults()
         filter.setValue(image, forKey: kCIInputImageKey)
-        self.setOptions(filter: &filter)
+        self.setFilterOptions(filter: &filter)
 
         guard let output: CIImage = filter.value(forKey: kCIOutputImageKey) as? CIImage else {
             throw SubfilterError.InvalidOutput
@@ -38,7 +38,7 @@ internal enum SubfilterError: Error {
 
 extension SubfilterError: LocalizedError {
 
-    public var errorDescription: String? {
+    internal var errorDescription: String? {
         switch self {
         case let .InvalidFilterKey(key):
             return NSLocalizedString("No existing filter matches key \(key)",

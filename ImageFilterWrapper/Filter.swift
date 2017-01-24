@@ -6,11 +6,11 @@
 //  Copyright © 2017 dempsey. All rights reserved.
 //
 
-public enum Filter {
+public enum ImageFilter {
 
     case Blur(BlurFilter)
 
-    var subfilter: Subfilter {
+    internal var subfilter: Subfilter {
         switch self {
         case let .Blur(subfilter):
             return subfilter
@@ -21,9 +21,15 @@ public enum Filter {
 
 extension CIFilter {
 
-    func apply(value: Any?, forKey key: FilterOption) {
-        if let value = value {
-            self.setValue(value, forKey: key.rawValue)
+    internal func setOptions(_ options: (value: Any?, key: FilterOption)...) {
+        for option in options {
+            if let value = option.value {
+                if let convertibleValue = value as? CoreImageConvertible {
+                    self.setValue(convertibleValue.coreImageFormat(), forKey: option.key.rawValue)
+                } else {
+                    self.setValue(value, forKey: option.key.rawValue)
+                }
+            }
         }
     }
 

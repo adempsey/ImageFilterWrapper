@@ -8,14 +8,14 @@
 
 public extension UIImage {
 
-    public func apply(filters: Filter...) -> UIImage {
+    public func applyFilters(_ filters: ImageFilter...) -> UIImage {
         guard var coreImage: CIImage = CIImage(image: self) else {
             return self
         }
 
         for filter in filters {
             do {
-                try coreImage = filter.subfilter.applyTo(image: coreImage)
+                try coreImage = filter.subfilter.applyFilter(toImage: coreImage)
             } catch let error {
                 print(error.localizedDescription)
             }
