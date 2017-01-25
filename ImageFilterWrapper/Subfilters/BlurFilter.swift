@@ -8,17 +8,18 @@
 
 /**
  A filter that softens images, decreasing the contrast between the edges in an image.
- Possible filters and options are:
+
+ Possible filters are:
 
  ````
- case Box(radius: Float?)
- case Disc(radius: Float?)
- case Gaussian(radius: Float?)
- case MaskedVariable(mask: UIImage?, radius: Float?)
+ case Box
+ case Disc
+ case Gaussian
+ case MaskedVariable
  case MedianFilter
- case Motion(radius: Float?, angle: Float?)
- case NoiseReduction(noiseLevel: Float?, sharpness: Float?)
- case Zoom(center: CGPoint?, amount: Float?)
+ case Motion
+ case NoiseReduction
+ case Zoom
  ````
  */
 public enum BlurFilter {

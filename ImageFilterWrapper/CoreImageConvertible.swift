@@ -26,7 +26,31 @@ extension CGPoint: CoreImageConvertible {
 
 }
 
+extension CGRect: CoreImageConvertible {
+
+    func coreImageFormat() -> NSObject {
+        return CIVector(cgRect: self)
+    }
+
+}
+
+extension CGSize: CoreImageConvertible {
+
+    func coreImageFormat() -> NSObject {
+        return CIVector(x: self.width, y: self.height)
+    }
+
+}
+
 // MARK: UIKit Extensions
+
+extension UIColor: CoreImageConvertible {
+
+    func coreImageFormat() -> NSObject {
+        return CIColor(color: self)
+    }
+
+}
 
 extension UIImage: CoreImageConvertible {
 

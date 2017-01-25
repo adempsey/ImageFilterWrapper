@@ -9,11 +9,12 @@
 
 /**
  A filter that sharpens images, increasing the contrast between the edges in an image.
- Possible filters and options are:
+
+ Possible filters are:
 
  ````
- case SharpenLuminance(sharpness: Float?)
- case UnsharpMask(radius: Float?, intensity: Float?)
+ case SharpenLuminance
+ case UnsharpMask
  ````
  */
 public enum SharpenFilter {

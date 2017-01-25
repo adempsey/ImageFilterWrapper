@@ -18,11 +18,23 @@ public enum ImageFilter {
      */
     case Sharpen(SharpenFilter)
 
+    /**
+     A filter that changes color values. Color adjustment filters are used to eliminate color casts,
+     adjust hue, and correct brightness and contrast. Color adjustment filters do not perform color
+     management; ColorSync performs color management. You can use Quartz 2D to specify the color space
+     associated with an image. For more information, see
+     [Color Management Overview](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/csintro/csintro_intro/csintro_intro.html#//apple_ref/doc/uid/TP30001148)
+     and [Quartz 2D Programming Guide](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066).
+     */
+    case ColorAdjustment(ColorAdjustmentFilter)
+
     internal var subfilter: Subfilter {
         switch self {
         case let .Blur(subfilter):
             return subfilter
         case let .Sharpen(subfilter):
+            return subfilter
+        case let .ColorAdjustment(subfilter):
             return subfilter
         }
     }
