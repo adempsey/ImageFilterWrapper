@@ -19,17 +19,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D3ACA731E3726FA00B3A482 /* CoreImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageConvertible.swift; sourceTree = "<group>"; };
+		8D3ACA731E3726FA00B3A482 /* CoreImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreImageConvertible.swift; path = Source/CoreImageConvertible.swift; sourceTree = "<group>"; };
 		8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAdjustmentFilter.swift; sourceTree = "<group>"; };
 		8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpenFilter.swift; sourceTree = "<group>"; };
 		8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageFilterWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFilterWrapper.h; sourceTree = "<group>"; };
-		8DD83DB41E33F4EF00395402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DD83DBB1E33F5ED00395402 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		8DD83DBD1E33F60F00395402 /* Subfilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subfilter.swift; sourceTree = "<group>"; };
+		8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImageFilterWrapper.h; path = Source/ImageFilterWrapper.h; sourceTree = "<group>"; };
+		8DD83DB41E33F4EF00395402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
+		8DD83DBB1E33F5ED00395402 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Source/Filter.swift; sourceTree = "<group>"; };
+		8DD83DBD1E33F60F00395402 /* Subfilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subfilter.swift; path = Source/Subfilter.swift; sourceTree = "<group>"; };
 		8DD83DC01E33FA4B00395402 /* BlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurFilter.swift; sourceTree = "<group>"; };
-		8DD83DC21E33FB6900395402 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
-		8DD83DC61E3473F300395402 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		8DD83DC21E33FB6900395402 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Source/Options.swift; sourceTree = "<group>"; };
+		8DD83DC61E3473F300395402 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,8 @@
 				8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */,
 				8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */,
 			);
-			path = Subfilters;
+			name = Subfilters;
+			path = Source/Subfilters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +287,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ImageFilterWrapper/Info.plist;
+				INFOPLIST_FILE = ImageFilterWrapper/Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dempsey.ImageFilterWrapper;
@@ -306,7 +307,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ImageFilterWrapper/Info.plist;
+				INFOPLIST_FILE = ImageFilterWrapper/Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dempsey.ImageFilterWrapper;
