@@ -11,13 +11,21 @@ public enum ImageFilter {
 
     /**
      A filter that softens images, decreasing the contrast between the edges in an image.
+
+     Possible filters are:
+
+     ````
+     case Box
+     case Disc
+     case Gaussian
+     case MaskedVariable
+     case MedianFilter
+     case Motion
+     case NoiseReduction
+     case Zoom
+     ````
      */
     case Blur(BlurFilter)
-
-    /**
-     A filter that sharpens images, increasing the contrast between the edges in an image.
-     */
-    case Sharpen(SharpenFilter)
 
     /**
      A filter that changes color values. Color adjustment filters are used to eliminate color casts,
@@ -26,6 +34,23 @@ public enum ImageFilter {
      associated with an image. For more information, see
      [Color Management Overview](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/csintro/csintro_intro/csintro_intro.html#//apple_ref/doc/uid/TP30001148)
      and [Quartz 2D Programming Guide](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066).
+
+     Possible filters are:
+     ````
+     case ColorClamp
+     case ColorControls
+     case ColorMatrix
+     case ColorPolynomial
+     case ExposureAdjust
+     case GammaAdjust
+     case HueAdjust
+     case LinearToSRGBToneCurve
+     case SRGBToneCurveToLinear
+     case TemperatureAndTint
+     case ToneCurve
+     case Vibrance
+     case WhitePointAdjust
+     ````
      */
     case ColorAdjustment(ColorAdjustmentFilter)
 
@@ -61,6 +86,18 @@ public enum ImageFilter {
      ````
      */
     case ColorEffect(ColorEffectFilter)
+
+    /**
+     A filter that sharpens images, increasing the contrast between the edges in an image.
+
+     Possible filters are:
+
+     ````
+     case SharpenLuminance
+     case UnsharpMask
+     ````
+     */
+    case Sharpen(SharpenFilter)
 
     internal var subfilter: Subfilter {
         switch self {

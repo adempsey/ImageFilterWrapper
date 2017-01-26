@@ -6,31 +6,6 @@
 //  Copyright © 2017 dempsey. All rights reserved.
 //
 
-/**
- A filter that changes color values. Color adjustment filters are used to eliminate color casts,
- adjust hue, and correct brightness and contrast. Color adjustment filters do not perform color
- management; ColorSync performs color management. You can use Quartz 2D to specify the color space
- associated with an image. For more information, see
- [Color Management Overview](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/csintro/csintro_intro/csintro_intro.html#//apple_ref/doc/uid/TP30001148)
- and [Quartz 2D Programming Guide](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066).
- 
- Possible filters are:
- ````
- case ColorClamp
- case ColorControls
- case ColorMatrix
- case ColorPolynomial
- case ExposureAdjust
- case GammaAdjust
- case HueAdjust
- case LinearToSRGBToneCurve
- case SRGBToneCurveToLinear
- case TemperatureAndTint
- case ToneCurve
- case Vibrance
- case WhitePointAdjust
- ````
- */
 public enum ColorAdjustmentFilter {
 
     /**

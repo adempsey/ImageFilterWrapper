@@ -6,17 +6,6 @@
 //  Copyright © 2017 dempsey. All rights reserved.
 //
 
-
-/**
- A filter that sharpens images, increasing the contrast between the edges in an image.
-
- Possible filters are:
-
- ````
- case SharpenLuminance
- case UnsharpMask
- ````
- */
 public enum SharpenFilter {
 
     /**

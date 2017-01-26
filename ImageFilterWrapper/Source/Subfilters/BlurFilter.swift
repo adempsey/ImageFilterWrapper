@@ -6,22 +6,6 @@
 //  Copyright © 2017 dempsey. All rights reserved.
 //
 
-/**
- A filter that softens images, decreasing the contrast between the edges in an image.
-
- Possible filters are:
-
- ````
- case Box
- case Disc
- case Gaussian
- case MaskedVariable
- case MedianFilter
- case Motion
- case NoiseReduction
- case Zoom
- ````
- */
 public enum BlurFilter {
 
     /**
