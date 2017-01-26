@@ -1,3 +1,4 @@
+
 //
 //  Filter.swift
 //  ImageFilterWrapper
@@ -28,6 +29,39 @@ public enum ImageFilter {
      */
     case ColorAdjustment(ColorAdjustmentFilter)
 
+    /**
+     A filter that modifies the color of an image to achieve an artistic effect. Examples of color
+     effect filters include filters that change a color image to a sepia image or a monochrome image
+     or that produces such effects as posterizing.
+
+     Possible filters are:
+     ````
+     case ColorCrossPolynomial
+     case ColorCube
+     case ColorCubeWithColorSpace
+     case ColorInvert
+     case ColorMap
+     case ColorMonochrome
+     case ColorPosterize
+     case FalseColor
+     case MaskToAlpha
+     case MaximumComponent
+     case MinimumComponent
+     case PhotoEffectChrome
+     case PhotoEffectFade
+     case PhotoEffectInstant
+     case PhotoEffectMono
+     case PhotoEffectNoir
+     case PhotoEffectProcess
+     case PhotoEffectTonal
+     case PhotoEffectTransfer
+     case SepiaTone
+     case Vignette
+     case VignetteEffect
+     ````
+     */
+    case ColorEffect(ColorEffectFilter)
+
     internal var subfilter: Subfilter {
         switch self {
         case let .Blur(subfilter):
@@ -35,6 +69,8 @@ public enum ImageFilter {
         case let .Sharpen(subfilter):
             return subfilter
         case let .ColorAdjustment(subfilter):
+            return subfilter
+        case let .ColorEffect(subfilter):
             return subfilter
         }
     }
