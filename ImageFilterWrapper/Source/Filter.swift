@@ -32,8 +32,10 @@ public enum ImageFilter {
      adjust hue, and correct brightness and contrast. Color adjustment filters do not perform color
      management; ColorSync performs color management. You can use Quartz 2D to specify the color space
      associated with an image. For more information, see
-     [Color Management Overview](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/csintro/csintro_intro/csintro_intro.html#//apple_ref/doc/uid/TP30001148)
-     and [Quartz 2D Programming Guide](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066).
+     [Color Management Overview
+     ](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/csintro/csintro_intro/csintro_intro.html#//apple_ref/doc/uid/TP30001148)
+     and [Quartz 2D Programming Guide
+     ](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066).
 
      Possible filters are:
      ````
@@ -88,6 +90,46 @@ public enum ImageFilter {
     case ColorEffect(ColorEffectFilter)
 
     /**
+     A filter that operates on two image sources, using the color values of one image to operate
+     on the other. Composite filters perform computations such as computing maximum values,
+     minimum values, and multiplying values between input images. You can use compositing filters to
+     add effects to an image, crop an image, and achieve a variety of other effects.
+
+     Possible filters are:
+     ````
+     case AdditionCompositing
+     case ColorBlendMode
+     case ColorBurnBlendMode
+     case ColorDodgeBlendMode
+     case DarkenBlendMode
+     case DifferenceBlendMode
+     case DivideBlendMode
+     case ExclusionBlendMode
+     case HardLightBlendMode
+     case HueBlendMode
+     case LightenBlendMode
+     case LinearBurnBlendMode
+     case LinearDodgeBlendMode
+     case LuminosityBlendMode
+     case MaximumCompositing
+     case MinimumCompositing
+     case MultiplyBlendMode
+     case MultiplyCompositing
+     case OverlayBlendMode
+     case PinLightBlendMode
+     case SaturationBlendMode
+     case ScreenBlendMode
+     case SoftLightBlendMode
+     case SourceAtopCompositing
+     case SourceInCompositing
+     case SourceOutCompositing
+     case SourceOverCompositing
+     case SubtractBlendMode
+     ````
+     */
+    case CompositeOperation(CompositeOperationFilter)
+
+    /**
      A filter that sharpens images, increasing the contrast between the edges in an image.
 
      Possible filters are:
@@ -103,11 +145,13 @@ public enum ImageFilter {
         switch self {
         case let .Blur(subfilter):
             return subfilter
-        case let .Sharpen(subfilter):
-            return subfilter
         case let .ColorAdjustment(subfilter):
             return subfilter
         case let .ColorEffect(subfilter):
+            return subfilter
+        case let .CompositeOperation(subfilter):
+            return subfilter
+        case let .Sharpen(subfilter):
             return subfilter
         }
     }

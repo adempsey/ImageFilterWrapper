@@ -225,7 +225,7 @@ public enum ColorEffectFilter {
 
 extension ColorEffectFilter: Subfilter {
 
-    public var key: String {
+    internal var key: String {
         switch self {
         case .ColorCrossPolynomial: return "CIColorCrossPolynomial"
         case .ColorCube: return "CIColorCube"
@@ -252,7 +252,7 @@ extension ColorEffectFilter: Subfilter {
         }
     }
 
-    public func setFilterOptions(filter: inout CIFilter) {
+    internal func setFilterOptions(filter: inout CIFilter) {
 
         switch self {
 
