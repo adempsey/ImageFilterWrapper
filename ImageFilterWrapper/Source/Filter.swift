@@ -130,6 +130,32 @@ public enum ImageFilter {
     case CompositeOperation(CompositeOperationFilter)
 
     /**
+     A filter that reshapes an image by altering its geometry to create a 3D effect. Using
+     distortion filters, you can displace portions of an image, apply lens effects, make a bulge in
+     an image, and perform other operations to achieve an artistic effect.
+     
+     Possible filters are:
+     ````
+     case BumpDistortion
+     case BumpDistortionLinear
+     case CircleSplashDistortion
+     case CircularWrap
+     case Droste
+     case DisplacementDistortion
+     case GlassDistortion
+     case GlassLozenge
+     case HoleDistortion
+     case LightTunnel
+     case PinchDistortion
+     case StretchCrop
+     case TorusLensDistortion
+     case TwirlDistortion
+     case VortexDistortion
+     ````
+     */
+    case DistortionEffect(DistortionEffectFilter)
+
+    /**
      A filter that sharpens images, increasing the contrast between the edges in an image.
 
      Possible filters are:
@@ -150,6 +176,8 @@ public enum ImageFilter {
         case let .ColorEffect(subfilter):
             return subfilter
         case let .CompositeOperation(subfilter):
+            return subfilter
+        case let .DistortionEffect(subfilter):
             return subfilter
         case let .Sharpen(subfilter):
             return subfilter
@@ -172,6 +200,7 @@ extension CIFilter {
     internal func setOptions(_ options: (value: Any?, key: FilterOption)...) {
         for option in options {
             if let value = option.value {
+
                 if let convertibleValue = value as? CoreImageConvertible {
                     self.setValue(convertibleValue.coreImageFormat(), forKey: option.key.rawValue)
                 } else {

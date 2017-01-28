@@ -18,6 +18,7 @@
 		8DD83DC31E33FB6900395402 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DC21E33FB6900395402 /* Options.swift */; };
 		8DD83DC71E3473F300395402 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DC61E3473F300395402 /* Image.swift */; };
 		8DE34FAA1E39C55100608DCB /* CompositeOperationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE34FA91E39C55100608DCB /* CompositeOperationFilter.swift */; };
+		8DE34FAC1E39D04A00608DCB /* DistortionEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8DD83DC21E33FB6900395402 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Source/Options.swift; sourceTree = "<group>"; };
 		8DD83DC61E3473F300395402 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/Image.swift; sourceTree = "<group>"; };
 		8DE34FA91E39C55100608DCB /* CompositeOperationFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeOperationFilter.swift; sourceTree = "<group>"; };
+		8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistortionEffectFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */,
 				8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */,
 				8DE34FA91E39C55100608DCB /* CompositeOperationFilter.swift */,
+				8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */,
 				8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */,
 			);
 			name = Subfilters;
@@ -178,6 +181,7 @@
 				8D3ACA741E3726FA00B3A482 /* CoreImageConvertible.swift in Sources */,
 				8DD83DBC1E33F5ED00395402 /* Filter.swift in Sources */,
 				8D400BD31E38614000EB05D6 /* ColorEffectFilter.swift in Sources */,
+				8DE34FAC1E39D04A00608DCB /* DistortionEffectFilter.swift in Sources */,
 				8D5B9EF01E37401F00767C2A /* SharpenFilter.swift in Sources */,
 				8DD83DC11E33FA4B00395402 /* BlurFilter.swift in Sources */,
 				8DD83DC71E3473F300395402 /* Image.swift in Sources */,
