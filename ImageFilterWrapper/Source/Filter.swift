@@ -167,6 +167,40 @@ public enum ImageFilter {
      */
     case Sharpen(SharpenFilter)
 
+    /**
+     A filter that makes a photographic image look as if it was painted or sketched. These filters
+     are typically used alone or in combination with other filters to achieve artistic effects.
+     
+     Possible filters are:
+
+     ````
+     case BlendWithAlphaMask
+     case BlendWithMask
+     case Bloom
+     case ComicEffect
+     case Convolution3x3
+     case Convolution5x5
+     case Convolution7x7
+     case Convolution9Horizontal
+     case Convolution9Vertical
+     case Crystallize
+     case DepthOfField
+     case Edges
+     case EdgeWork
+     case Gloom
+     case HeightFieldFromMask
+     case HexagonalPixellate
+     case HighlightShadowAdjust
+     case LineOverlay
+     case Pixellate
+     case Pointillize
+     case ShadedMaterial
+     case SpotColor
+     case Spotlight
+     ````
+     */
+    case Stylize(StylizeFilter)
+
     internal var subfilter: Subfilter {
         switch self {
         case let .Blur(subfilter):
@@ -180,6 +214,8 @@ public enum ImageFilter {
         case let .DistortionEffect(subfilter):
             return subfilter
         case let .Sharpen(subfilter):
+            return subfilter
+        case let .Stylize(subfilter):
             return subfilter
         }
     }

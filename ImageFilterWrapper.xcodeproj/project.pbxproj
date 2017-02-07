@@ -19,6 +19,8 @@
 		8DD83DC71E3473F300395402 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DC61E3473F300395402 /* Image.swift */; };
 		8DE34FAA1E39C55100608DCB /* CompositeOperationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE34FA91E39C55100608DCB /* CompositeOperationFilter.swift */; };
 		8DE34FAC1E39D04A00608DCB /* DistortionEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */; };
+		8DE4F9CF1E3D4E3000700289 /* StylizeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F9CE1E3D4E3000700289 /* StylizeFilter.swift */; };
+		8DE4F9D51E3D7AA300700289 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F9D41E3D7AA300700289 /* Matrix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		8DD83DC61E3473F300395402 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/Image.swift; sourceTree = "<group>"; };
 		8DE34FA91E39C55100608DCB /* CompositeOperationFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeOperationFilter.swift; sourceTree = "<group>"; };
 		8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistortionEffectFilter.swift; sourceTree = "<group>"; };
+		8DE4F9CE1E3D4E3000700289 /* StylizeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylizeFilter.swift; sourceTree = "<group>"; };
+		8DE4F9D41E3D7AA300700289 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix.swift; path = Source/Matrix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				8DD83DBB1E33F5ED00395402 /* Filter.swift */,
 				8DD83DC61E3473F300395402 /* Image.swift */,
 				8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */,
+				8DE4F9D41E3D7AA300700289 /* Matrix.swift */,
 				8DD83DC21E33FB6900395402 /* Options.swift */,
 				8DD83DBD1E33F60F00395402 /* Subfilter.swift */,
 				8DD83DBF1E33F93B00395402 /* Subfilters */,
@@ -89,6 +94,7 @@
 				8DE34FA91E39C55100608DCB /* CompositeOperationFilter.swift */,
 				8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */,
 				8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */,
+				8DE4F9CE1E3D4E3000700289 /* StylizeFilter.swift */,
 			);
 			name = Subfilters;
 			path = Source/Subfilters;
@@ -174,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE4F9CF1E3D4E3000700289 /* StylizeFilter.swift in Sources */,
 				8DD83DC31E33FB6900395402 /* Options.swift in Sources */,
 				8DD83DBE1E33F60F00395402 /* Subfilter.swift in Sources */,
+				8DE4F9D51E3D7AA300700289 /* Matrix.swift in Sources */,
 				8D5921031E3847AE00844FD1 /* ColorAdjustmentFilter.swift in Sources */,
 				8DE34FAA1E39C55100608DCB /* CompositeOperationFilter.swift in Sources */,
 				8D3ACA741E3726FA00B3A482 /* CoreImageConvertible.swift in Sources */,

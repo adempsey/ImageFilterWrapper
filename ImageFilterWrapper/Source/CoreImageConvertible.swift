@@ -11,9 +11,7 @@
  consumed by core image filter APIs.
  */
 internal protocol CoreImageConvertible {
-
     func coreImageFormat() -> NSObject
-    
 }
 
 // MARK: Core Graphics Extensions
@@ -58,4 +56,49 @@ extension UIImage: CoreImageConvertible {
         return CIImage(image: self)!
     }
 
+}
+
+// MARK: IFW Extensions
+
+extension Matrix: CoreImageConvertible {
+
+    func coreImageFormat() -> NSObject {
+        let floats: [CGFloat] = self.container.map {
+            return ($0 as! CoreImageNumeric).coreImageFormat()
+        }
+        return CIVector(values: floats, count: self.container.count)
+    }
+
+}
+
+// MARK: Numeric Types
+
+public protocol Numeric {}
+
+internal protocol CoreImageNumeric: Numeric {
+    func coreImageFormat() -> CGFloat
+}
+
+extension Int: CoreImageNumeric {
+    func coreImageFormat() -> CGFloat {
+        return CGFloat(self)
+    }
+}
+
+extension UInt: CoreImageNumeric {
+    func coreImageFormat() -> CGFloat {
+        return CGFloat(self)
+    }
+}
+
+extension Float: CoreImageNumeric {
+    func coreImageFormat() -> CGFloat {
+        return CGFloat(self)
+    }
+}
+
+extension Double: CoreImageNumeric {
+    func coreImageFormat() -> CGFloat {
+        return CGFloat(self)
+    }
 }
