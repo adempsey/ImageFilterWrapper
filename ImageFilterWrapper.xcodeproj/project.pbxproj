@@ -11,6 +11,7 @@
 		8D400BD31E38614000EB05D6 /* ColorEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */; };
 		8D5921031E3847AE00844FD1 /* ColorAdjustmentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */; };
 		8D5B9EF01E37401F00767C2A /* SharpenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */; };
+		8DD44B261E4ADF3B0057A112 /* TileEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */; };
 		8DD83DB51E33F4EF00395402 /* ImageFilterWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DD83DBC1E33F5ED00395402 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DBB1E33F5ED00395402 /* Filter.swift */; };
 		8DD83DBE1E33F60F00395402 /* Subfilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DBD1E33F60F00395402 /* Subfilter.swift */; };
@@ -28,6 +29,7 @@
 		8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorEffectFilter.swift; sourceTree = "<group>"; };
 		8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAdjustmentFilter.swift; sourceTree = "<group>"; };
 		8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpenFilter.swift; sourceTree = "<group>"; };
+		8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileEffectFilter.swift; sourceTree = "<group>"; };
 		8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageFilterWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImageFilterWrapper.h; path = Source/ImageFilterWrapper.h; sourceTree = "<group>"; };
 		8DD83DB41E33F4EF00395402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */,
 				8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */,
 				8DE4F9CE1E3D4E3000700289 /* StylizeFilter.swift */,
+				8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */,
 			);
 			name = Subfilters;
 			path = Source/Subfilters;
@@ -188,6 +191,7 @@
 				8DE34FAA1E39C55100608DCB /* CompositeOperationFilter.swift in Sources */,
 				8D3ACA741E3726FA00B3A482 /* CoreImageConvertible.swift in Sources */,
 				8DD83DBC1E33F5ED00395402 /* Filter.swift in Sources */,
+				8DD44B261E4ADF3B0057A112 /* TileEffectFilter.swift in Sources */,
 				8D400BD31E38614000EB05D6 /* ColorEffectFilter.swift in Sources */,
 				8DE34FAC1E39D04A00608DCB /* DistortionEffectFilter.swift in Sources */,
 				8D5B9EF01E37401F00767C2A /* SharpenFilter.swift in Sources */,

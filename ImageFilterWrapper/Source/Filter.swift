@@ -201,6 +201,33 @@ public enum ImageFilter {
      */
     case Stylize(StylizeFilter)
 
+    /**
+     A filter that typically applies an effect to an image and then creates smaller versions of the
+     image (tiles), which are then laid out to create a pattern that's infinite in extent.
+     
+     Possible filters are:
+
+     ````
+     case AffineClamp
+     case AffineTile
+     case EightfoldReflectedTile
+     case FourfoldReflectedTile
+     case FourfoldRotatedTile
+     case FourfouldTranslatedTile
+     case GlideReflectedTile
+     case Kaleidoscope
+     case OpTile
+     case ParallelogramTile
+     case PerspectiveTile
+     case SixfoldReflectedTile
+     case SixfoldRotatedTile
+     case TriangleKaleidoscope
+     case TriangleTile
+     case TwelvefoldReflectedTile
+     ````
+     */
+    case TileEffect(TileEffectFilter)
+
     internal var subfilter: Subfilter {
         switch self {
         case let .Blur(subfilter):
@@ -216,6 +243,8 @@ public enum ImageFilter {
         case let .Sharpen(subfilter):
             return subfilter
         case let .Stylize(subfilter):
+            return subfilter
+        case let .TileEffect(subfilter):
             return subfilter
         }
     }

@@ -16,6 +16,15 @@ internal protocol CoreImageConvertible {
 
 // MARK: Core Graphics Extensions
 
+extension CGAffineTransform: CoreImageConvertible {
+
+    func coreImageFormat() -> NSObject {
+//        let value: NSValue = NSValue(bytes: &self, objCType: @encode(CGAffineTransform))
+        return CIVector(cgAffineTransform: self)
+    }
+
+}
+
 extension CGPoint: CoreImageConvertible {
 
     func coreImageFormat() -> NSObject {
