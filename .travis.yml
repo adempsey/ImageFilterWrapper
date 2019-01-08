@@ -1,4 +1,6 @@
 language: swift
-xcode_workspace: ImageFilterWrapper.xcworkspace
-xcode_scheme: ImageFilterWrapperTests
-xcode_destination: platform=iOS Simulator,name=iPhone 8,OS=11.4
+before_install:
+ - gem install xcpretty
+osx_image: xcode9.4.1
+script:
+ - xcodebuild test -workspace ImageFilterWrapper.xcworkspace/ -scheme ImageFilterWrapperTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.4' | xcpretty -c && exit ${PIPESTATUS[0]}
