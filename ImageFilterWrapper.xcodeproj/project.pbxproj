@@ -12,6 +12,8 @@
 		8D5921031E3847AE00844FD1 /* ColorAdjustmentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */; };
 		8D5B9EF01E37401F00767C2A /* SharpenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */; };
 		8DD44B261E4ADF3B0057A112 /* TileEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */; };
+		8DD5C94921E4574F001234A0 /* CoreImageConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C94821E4574F001234A0 /* CoreImageConvertibleTests.swift */; };
+		8DD5C94B21E4574F001234A0 /* ImageFilterWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */; };
 		8DD83DB51E33F4EF00395402 /* ImageFilterWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DD83DBC1E33F5ED00395402 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DBB1E33F5ED00395402 /* Filter.swift */; };
 		8DD83DBE1E33F60F00395402 /* Subfilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD83DBD1E33F60F00395402 /* Subfilter.swift */; };
@@ -24,12 +26,25 @@
 		8DE4F9D51E3D7AA300700289 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F9D41E3D7AA300700289 /* Matrix.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8DD5C94C21E4574F001234A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DD83DA71E33F4EF00395402 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD83DAF1E33F4EF00395402;
+			remoteInfo = ImageFilterWrapper;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8D3ACA731E3726FA00B3A482 /* CoreImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreImageConvertible.swift; path = Source/CoreImageConvertible.swift; sourceTree = "<group>"; };
 		8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorEffectFilter.swift; sourceTree = "<group>"; };
 		8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAdjustmentFilter.swift; sourceTree = "<group>"; };
 		8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpenFilter.swift; sourceTree = "<group>"; };
 		8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileEffectFilter.swift; sourceTree = "<group>"; };
+		8DD5C94621E4574F001234A0 /* ImageFilterWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilterWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD5C94821E4574F001234A0 /* CoreImageConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageConvertibleTests.swift; sourceTree = "<group>"; };
+		8DD5C94A21E4574F001234A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageFilterWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD83DB31E33F4EF00395402 /* ImageFilterWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImageFilterWrapper.h; path = Source/ImageFilterWrapper.h; sourceTree = "<group>"; };
 		8DD83DB41E33F4EF00395402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
@@ -45,6 +60,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8DD5C94321E4574F001234A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD5C94B21E4574F001234A0 /* ImageFilterWrapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD83DAC1E33F4EF00395402 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,10 +78,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DD5C94721E4574F001234A0 /* ImageFilterWrapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DD5C94821E4574F001234A0 /* CoreImageConvertibleTests.swift */,
+				8DD5C94A21E4574F001234A0 /* Info.plist */,
+			);
+			path = ImageFilterWrapperTests;
+			sourceTree = "<group>";
+		};
 		8DD83DA61E33F4EF00395402 = {
 			isa = PBXGroup;
 			children = (
 				8DD83DB21E33F4EF00395402 /* ImageFilterWrapper */,
+				8DD5C94721E4574F001234A0 /* ImageFilterWrapperTests */,
 				8DD83DB11E33F4EF00395402 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */,
+				8DD5C94621E4574F001234A0 /* ImageFilterWrapperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +151,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8DD5C94521E4574F001234A0 /* ImageFilterWrapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DD5C95021E4574F001234A0 /* Build configuration list for PBXNativeTarget "ImageFilterWrapperTests" */;
+			buildPhases = (
+				8DD5C94221E4574F001234A0 /* Sources */,
+				8DD5C94321E4574F001234A0 /* Frameworks */,
+				8DD5C94421E4574F001234A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DD5C94D21E4574F001234A0 /* PBXTargetDependency */,
+			);
+			name = ImageFilterWrapperTests;
+			productName = ImageFilterWrapperTests;
+			productReference = 8DD5C94621E4574F001234A0 /* ImageFilterWrapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8DD83DAF1E33F4EF00395402 /* ImageFilterWrapper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DD83DB81E33F4EF00395402 /* Build configuration list for PBXNativeTarget "ImageFilterWrapper" */;
@@ -141,9 +193,14 @@
 		8DD83DA71E33F4EF00395402 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = dempsey;
 				TargetAttributes = {
+					8DD5C94521E4574F001234A0 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
 					8DD83DAF1E33F4EF00395402 = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
@@ -164,11 +221,19 @@
 			projectRoot = "";
 			targets = (
 				8DD83DAF1E33F4EF00395402 /* ImageFilterWrapper */,
+				8DD5C94521E4574F001234A0 /* ImageFilterWrapperTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8DD5C94421E4574F001234A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD83DAE1E33F4EF00395402 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +244,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8DD5C94221E4574F001234A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD5C94921E4574F001234A0 /* CoreImageConvertibleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD83DAB1E33F4EF00395402 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,7 +275,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8DD5C94D21E4574F001234A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD83DAF1E33F4EF00395402 /* ImageFilterWrapper */;
+			targetProxy = 8DD5C94C21E4574F001234A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8DD5C94E21E4574F001234A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ImageFilterWrapperTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.healthhuddle.ImageFilterWrapperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DD5C94F21E4574F001234A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ImageFilterWrapperTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.healthhuddle.ImageFilterWrapperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8DD83DB61E33F4EF00395402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,6 +481,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8DD5C95021E4574F001234A0 /* Build configuration list for PBXNativeTarget "ImageFilterWrapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DD5C94E21E4574F001234A0 /* Debug */,
+				8DD5C94F21E4574F001234A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8DD83DAA1E33F4EF00395402 /* Build configuration list for PBXProject "ImageFilterWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
