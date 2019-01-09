@@ -16,6 +16,7 @@
 		8D624C6F21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D624C6E21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift */; };
 		8D624C7221E569EF0053F895 /* FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D624C7121E569EF0053F895 /* FilterTests.swift */; };
 		8D624C7421E64CF00053F895 /* giraffe.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D624C7321E64CF00053F895 /* giraffe.png */; };
+		8DC2734E21E6704F00B0BE35 /* FilterSharpenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */; };
 		8DD44B261E4ADF3B0057A112 /* TileEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */; };
 		8DD5C94921E4574F001234A0 /* CoreImageConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C94821E4574F001234A0 /* CoreImageConvertibleTests.swift */; };
 		8DD5C94B21E4574F001234A0 /* ImageFilterWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */; };
@@ -52,6 +53,7 @@
 		8D624C6E21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageFilterWrapperAdditions.swift"; sourceTree = "<group>"; };
 		8D624C7121E569EF0053F895 /* FilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTests.swift; sourceTree = "<group>"; };
 		8D624C7321E64CF00053F895 /* giraffe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffe.png; sourceTree = "<group>"; };
+		8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSharpenTests.swift; sourceTree = "<group>"; };
 		8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileEffectFilter.swift; sourceTree = "<group>"; };
 		8DD5C94621E4574F001234A0 /* ImageFilterWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilterWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD5C94821E4574F001234A0 /* CoreImageConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageConvertibleTests.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		8D624C7021E569D60053F895 /* FilterTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */,
 				8D624C6721E550950053F895 /* FilterBlurTests.swift */,
 				8D624C7121E569EF0053F895 /* FilterTests.swift */,
 			);
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC2734E21E6704F00B0BE35 /* FilterSharpenTests.swift in Sources */,
 				8D624C6F21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift in Sources */,
 				8D624C7221E569EF0053F895 /* FilterTests.swift in Sources */,
 				8D624C6821E550950053F895 /* FilterBlurTests.swift in Sources */,
