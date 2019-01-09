@@ -11,6 +11,11 @@
 		8D400BD31E38614000EB05D6 /* ColorEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */; };
 		8D5921031E3847AE00844FD1 /* ColorAdjustmentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */; };
 		8D5B9EF01E37401F00767C2A /* SharpenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */; };
+		8D624C6821E550950053F895 /* FilterBlurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D624C6721E550950053F895 /* FilterBlurTests.swift */; };
+		8D624C6B21E553130053F895 /* lion.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D624C6A21E553130053F895 /* lion.png */; };
+		8D624C6F21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D624C6E21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift */; };
+		8D624C7221E569EF0053F895 /* FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D624C7121E569EF0053F895 /* FilterTests.swift */; };
+		8D624C7421E64CF00053F895 /* giraffe.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D624C7321E64CF00053F895 /* giraffe.png */; };
 		8DD44B261E4ADF3B0057A112 /* TileEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */; };
 		8DD5C94921E4574F001234A0 /* CoreImageConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C94821E4574F001234A0 /* CoreImageConvertibleTests.swift */; };
 		8DD5C94B21E4574F001234A0 /* ImageFilterWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD83DB01E33F4EF00395402 /* ImageFilterWrapper.framework */; };
@@ -41,6 +46,12 @@
 		8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorEffectFilter.swift; sourceTree = "<group>"; };
 		8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAdjustmentFilter.swift; sourceTree = "<group>"; };
 		8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpenFilter.swift; sourceTree = "<group>"; };
+		8D624C6721E550950053F895 /* FilterBlurTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBlurTests.swift; sourceTree = "<group>"; };
+		8D624C6A21E553130053F895 /* lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lion.png; path = ImageFilterWrapperTests/Resources/lion.png; sourceTree = SOURCE_ROOT; };
+		8D624C6C21E55E700053F895 /* ImageFilterWrapperTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageFilterWrapperTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		8D624C6E21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageFilterWrapperAdditions.swift"; sourceTree = "<group>"; };
+		8D624C7121E569EF0053F895 /* FilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTests.swift; sourceTree = "<group>"; };
+		8D624C7321E64CF00053F895 /* giraffe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffe.png; sourceTree = "<group>"; };
 		8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileEffectFilter.swift; sourceTree = "<group>"; };
 		8DD5C94621E4574F001234A0 /* ImageFilterWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilterWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD5C94821E4574F001234A0 /* CoreImageConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageConvertibleTests.swift; sourceTree = "<group>"; };
@@ -78,11 +89,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D624C6921E552FD0053F895 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D624C7321E64CF00053F895 /* giraffe.png */,
+				8D624C6A21E553130053F895 /* lion.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8D624C6D21E5694D0053F895 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8D624C6E21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8D624C7021E569D60053F895 /* FilterTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D624C6721E550950053F895 /* FilterBlurTests.swift */,
+				8D624C7121E569EF0053F895 /* FilterTests.swift */,
+			);
+			path = FilterTests;
+			sourceTree = "<group>";
+		};
 		8DD5C94721E4574F001234A0 /* ImageFilterWrapperTests */ = {
 			isa = PBXGroup;
 			children = (
 				8DD5C94821E4574F001234A0 /* CoreImageConvertibleTests.swift */,
+				8D624C7021E569D60053F895 /* FilterTests */,
+				8D624C6C21E55E700053F895 /* ImageFilterWrapperTests-Bridging-Header.h */,
 				8DD5C94A21E4574F001234A0 /* Info.plist */,
+				8D624C6921E552FD0053F895 /* Resources */,
+				8D624C6D21E5694D0053F895 /* Utilities */,
 			);
 			path = ImageFilterWrapperTests;
 			sourceTree = "<group>";
@@ -231,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D624C7421E64CF00053F895 /* giraffe.png in Resources */,
+				8D624C6B21E553130053F895 /* lion.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D624C6F21E5696A0053F895 /* UIImage+ImageFilterWrapperAdditions.swift in Sources */,
+				8D624C7221E569EF0053F895 /* FilterTests.swift in Sources */,
+				8D624C6821E550950053F895 /* FilterBlurTests.swift in Sources */,
 				8DD5C94921E4574F001234A0 /* CoreImageConvertibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +353,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.healthhuddle.ImageFilterWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageFilterWrapperTests/ImageFilterWrapperTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,6 +382,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.healthhuddle.ImageFilterWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageFilterWrapperTests/ImageFilterWrapperTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
