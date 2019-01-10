@@ -20,6 +20,8 @@ public extension UIImage {
             return self
         }
 
+        let originalRect: CGRect = coreImage.extent
+
         for filter in filters {
             do {
                 try coreImage = filter.subfilter.applyFilter(toImage: coreImage)
@@ -30,11 +32,15 @@ public extension UIImage {
 
         let context: CIContext = CIContext(options: nil)
         let rect: CGRect = coreImage.extent
-        guard let cgImage: CGImage = context.createCGImage(coreImage, from: rect) else {
-            return self
+
+        if let cgImage: CGImage = context.createCGImage(coreImage, from: rect) {
+            return UIImage(cgImage: cgImage)
+
+        } else if let cgImage: CGImage = context.createCGImage(coreImage, from: originalRect) {
+            return UIImage(cgImage: cgImage)
         }
 
-        return UIImage(cgImage: cgImage)
+        return self
     }
 
 }
