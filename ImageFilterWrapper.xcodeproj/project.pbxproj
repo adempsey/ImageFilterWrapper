@@ -30,6 +30,7 @@
 		8DE34FAC1E39D04A00608DCB /* DistortionEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */; };
 		8DE4F9CF1E3D4E3000700289 /* StylizeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F9CE1E3D4E3000700289 /* StylizeFilter.swift */; };
 		8DE4F9D51E3D7AA300700289 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F9D41E3D7AA300700289 /* Matrix.swift */; };
+		8DE7139621E691C900383E16 /* FilterDistortionEffectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7139521E691C900383E16 /* FilterDistortionEffectTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistortionEffectFilter.swift; sourceTree = "<group>"; };
 		8DE4F9CE1E3D4E3000700289 /* StylizeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylizeFilter.swift; sourceTree = "<group>"; };
 		8DE4F9D41E3D7AA300700289 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix.swift; path = Source/Matrix.swift; sourceTree = "<group>"; };
+		8DE7139521E691C900383E16 /* FilterDistortionEffectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDistortionEffectTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		8D624C7021E569D60053F895 /* FilterTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DE7139521E691C900383E16 /* FilterDistortionEffectTests.swift */,
 				8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */,
 				8D624C6721E550950053F895 /* FilterBlurTests.swift */,
 				8D624C7121E569EF0053F895 /* FilterTests.swift */,
@@ -299,6 +302,7 @@
 				8D624C7221E569EF0053F895 /* FilterTests.swift in Sources */,
 				8D624C6821E550950053F895 /* FilterBlurTests.swift in Sources */,
 				8DD5C94921E4574F001234A0 /* CoreImageConvertibleTests.swift in Sources */,
+				8DE7139621E691C900383E16 /* FilterDistortionEffectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

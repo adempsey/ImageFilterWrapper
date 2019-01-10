@@ -24,7 +24,8 @@ class FilterTests: XCTestCase {
         let filteredImg = img.applyFilters(filter)
         let imgHash = filteredImg.md5()
 
-        XCTAssertEqual(checksum, imgHash)
+        XCTAssertEqual(checksum, imgHash, "Filter produced unknown checksum")
+        XCTAssertNotEqual(checksum, img.md5(), "Filter produced unchanged image")
     }
     
 }
