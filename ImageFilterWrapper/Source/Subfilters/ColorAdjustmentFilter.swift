@@ -196,8 +196,16 @@ extension ColorAdjustmentFilter: Subfilter {
     internal func setFilterOptions(filter: inout CIFilter) {
         switch self {
         case let .ColorClamp(minComponents, maxComponents):
-            filter.setOptions((minComponents, .MinComponents),
-                              (maxComponents, .MaxComponents))
+            filter.setOptions((minComponents != nil ? CIVector(x: minComponents!.0.coreImageFormat(),
+                                                               y: minComponents!.1.coreImageFormat(),
+                                                               z: minComponents!.2.coreImageFormat(),
+                                                               w: minComponents!.3.coreImageFormat()) : nil,
+                               .MinComponents),
+                              (maxComponents != nil ? CIVector(x: maxComponents!.0.coreImageFormat(),
+                                                               y: maxComponents!.1.coreImageFormat(),
+                                                               z: maxComponents!.2.coreImageFormat(),
+                                                               w: maxComponents!.3.coreImageFormat()) : nil,
+                               .MaxComponents))
 
         case let .ColorControls(saturation, brightness, contrast):
             filter.setOptions((saturation, .Saturation),
@@ -205,17 +213,46 @@ extension ColorAdjustmentFilter: Subfilter {
                               (contrast, .Contrast))
 
         case let .ColorMatrix(r, g, b, a, bias):
-            filter.setOptions((r, .RVector),
-                              (g, .GVector),
-                              (b, .BVector),
-                              (a, .AVector),
-                              (bias, .BiasVector))
+            filter.setOptions((r != nil ? CIVector(x: r!.0.coreImageFormat(),
+                                                   y: r!.1.coreImageFormat(),
+                                                   z: r!.2.coreImageFormat(),
+                                                   w: r!.3.coreImageFormat()) : nil, .RVector),
+                              (g != nil ? CIVector(x: g!.0.coreImageFormat(),
+                                                   y: g!.1.coreImageFormat(),
+                                                   z: g!.2.coreImageFormat(),
+                                                   w: g!.3.coreImageFormat()) : nil, .GVector),
+                              (b != nil ? CIVector(x: b!.0.coreImageFormat(),
+                                                   y: b!.1.coreImageFormat(),
+                                                   z: b!.2.coreImageFormat(),
+                                                   w: b!.3.coreImageFormat()) : nil, .BVector),
+                              (a != nil ? CIVector(x: a!.0.coreImageFormat(),
+                                                   y: a!.1.coreImageFormat(),
+                                                   z: a!.2.coreImageFormat(),
+                                                   w: a!.3.coreImageFormat()) : nil, .AVector),
+                              (bias != nil ? CIVector(x: bias!.0.coreImageFormat(),
+                                                      y: bias!.1.coreImageFormat(),
+                                                      z: bias!.2.coreImageFormat(),
+                                                      w: bias!.3.coreImageFormat()) : nil, .BiasVector)
+            )
 
         case let .ColorPolynomial(r, g, b, a):
-            filter.setOptions((r, .RedCoefficients),
-                              (g, .GreenCoefficients),
-                              (b, .BlueCoefficients),
-                              (a, .AlphaCoefficients))
+            filter.setOptions((r != nil ? CIVector(x: r!.0.coreImageFormat(),
+                                                   y: r!.1.coreImageFormat(),
+                                                   z: r!.2.coreImageFormat(),
+                                                   w: r!.3.coreImageFormat()) : nil, .RedCoefficients),
+                              (g != nil ? CIVector(x: g!.0.coreImageFormat(),
+                                                   y: g!.1.coreImageFormat(),
+                                                   z: g!.2.coreImageFormat(),
+                                                   w: g!.3.coreImageFormat()) : nil, .GreenCoefficients),
+                              (b != nil ? CIVector(x: b!.0.coreImageFormat(),
+                                                   y: b!.1.coreImageFormat(),
+                                                   z: b!.2.coreImageFormat(),
+                                                   w: b!.3.coreImageFormat()) : nil, .BlueCoefficients),
+                              (a != nil ? CIVector(x: a!.0.coreImageFormat(),
+                                                   y: a!.1.coreImageFormat(),
+                                                   z: a!.2.coreImageFormat(),
+                                                   w: a!.3.coreImageFormat()) : nil, .AlphaCoefficients)
+            )
 
         case let .ExposureAdjust(EV):
             filter.setOptions((EV, .EV))
@@ -227,15 +264,28 @@ extension ColorAdjustmentFilter: Subfilter {
             filter.setOptions((angle, .Angle))
 
         case let .TemperatureAndTint(neutral, targetNeutral):
-            filter.setOptions((neutral, .Neutral),
-                              (targetNeutral, .TargetNeutral))
+            filter.setOptions((neutral != nil ? CIVector(x: neutral!.0.coreImageFormat(),
+                                                         y: neutral!.1.coreImageFormat()) : nil, .Neutral),
+                              (targetNeutral != nil ? CIVector(x: targetNeutral!.0.coreImageFormat(),
+                                                               y: targetNeutral!.1.coreImageFormat()) : nil, .TargetNeutral)
+            )
 
         case let .ToneCurve(point0, point1, point2, point3, point4):
-            filter.setOptions((point0, .Point0),
-                              (point1, .Point1),
-                              (point2, .Point2),
-                              (point3, .Point3),
-                              (point4, .Point4))
+            filter.setOptions((point0 != nil ? CIVector(x: point0!.0.coreImageFormat(),
+                                                        y: point0!.1.coreImageFormat()) : nil,
+                               .Point0),
+                              (point1 != nil ? CIVector(x: point1!.0.coreImageFormat(),
+                                                        y: point1!.1.coreImageFormat()) : nil,
+                               .Point1),
+                              (point2 != nil ? CIVector(x: point2!.0.coreImageFormat(),
+                                                        y: point2!.1.coreImageFormat()) : nil,
+                               .Point2),
+                              (point3 != nil ? CIVector(x: point3!.0.coreImageFormat(),
+                                                        y: point3!.1.coreImageFormat()) : nil,
+                               .Point3),
+                              (point4 != nil ? CIVector(x: point4!.0.coreImageFormat(),
+                                                        y: point4!.1.coreImageFormat()) : nil,
+                               .Point4))
 
         case let .Vibrance(amount):
             filter.setOptions((amount, .Amount))
