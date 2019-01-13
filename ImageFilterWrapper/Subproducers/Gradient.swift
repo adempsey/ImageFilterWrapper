@@ -8,22 +8,35 @@
 
 public enum GradientProducer {
 
+    /**
+     Generates a gradient that varies from one color to another using a Gaussian distribution.
+     */
     case Gaussian(center: CGPoint?,
                   color0: UIColor,
                   color1: UIColor,
                   radius: Float?)
 
+    /**
+     Generates a gradient that varies along a linear axis between two defined endpoints.
+     */
     case Linear(point0: CGPoint?,
                 point1: CGPoint?,
                 color0: UIColor,
                 color1: UIColor)
 
+    /**
+     Generates a gradient that varies radially between two circles having the same center.
+     */
     case Radial(center: CGPoint?,
                 radius0: Float?,
                 radius1: Float?,
                 color0: UIColor,
                 color1: UIColor)
 
+    /**
+     Generates a gradient that uses an S-curve function to blend colors along a linear axis between
+     two defined endpoints.
+     */
     case SmoothLinear(point0: CGPoint?,
                       point1: CGPoint?,
                       color0: UIColor,

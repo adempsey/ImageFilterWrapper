@@ -8,6 +8,18 @@
 
 public enum ImageProducer {
 
+    /**
+     A filter that generates a fill whose color varies smoothly. Exactly how color varies
+     depends on the type of gradient - linear, radial, or Gaussian.
+
+     Possible producers are:
+     ````
+     case Gaussian
+     case Linear
+     case Radial
+     case SmoothLinear
+     ````
+     */
     case Gradient(GradientProducer)
 
     internal var subProducer: Subfilter {
