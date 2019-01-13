@@ -13,13 +13,15 @@ internal protocol Subfilter {
 
 internal extension Subfilter {
 
-    func applyFilter(toImage image: CIImage) throws -> CIImage {
+    func applyFilter(to image: CIImage, requireInput: Bool) throws -> CIImage {
         guard var filter: CIFilter = CIFilter(name: self.key) else {
             throw SubfilterError.InvalidFilterKey(self.key)
         }
 
         filter.setDefaults()
-        filter.setValue(image, forKey: kCIInputImageKey)
+        if requireInput {
+            filter.setValue(image, forKey: kCIInputImageKey)
+        }
         self.setFilterOptions(filter: &filter)
 
         guard let output: CIImage = filter.value(forKey: kCIOutputImageKey) as? CIImage else {

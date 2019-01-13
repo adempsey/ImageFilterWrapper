@@ -24,7 +24,7 @@ public extension UIImage {
 
         for filter in filters {
             do {
-                try coreImage = filter.subfilter.applyFilter(toImage: coreImage)
+                try coreImage = filter.subfilter.applyFilter(to: coreImage, requireInput: true)
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -41,6 +41,24 @@ public extension UIImage {
         }
 
         return self
+    }
+
+    public static func generate(_ producer: ImageProducer, size: CGSize) -> UIImage {
+        var coreImage: CIImage = CIImage.empty()
+        do {
+            try coreImage = producer.subProducer.applyFilter(to: coreImage, requireInput: false)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+
+        let context: CIContext = CIContext(options: nil)
+        let rect: CGRect = CGRect(origin: .zero, size: size)
+
+        if let cgImage: CGImage = context.createCGImage(coreImage, from: rect) {
+            return UIImage(cgImage: cgImage)
+        }
+
+        return UIImage()
     }
 
 }
