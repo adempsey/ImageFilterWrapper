@@ -155,6 +155,24 @@ public enum ImageFilter {
      */
     case DistortionEffect(DistortionEffectFilter)
 
+
+    /**
+     A filter that simulates a variety of halftone screens, to mimic the halftone process used
+     in print media. The output of these filters has the familiar “newspaper” look of the various
+     dot patterns. Filters are typically named after the pattern created by the virtual halftone
+     screen, such as circular screen or hatched screen.
+
+     Possible filters are:
+     ````
+     case CircularScreen
+     case CMYKHalftone
+     case DotScreen
+     case HatchedScreen
+     case LineScreen
+     ````
+     */
+    case HalftoneEffect(HalftoneEffectFilter)
+
     /**
      A filter that sharpens images, increasing the contrast between the edges in an image.
 
@@ -239,6 +257,8 @@ public enum ImageFilter {
         case let .CompositeOperation(subfilter):
             return subfilter
         case let .DistortionEffect(subfilter):
+            return subfilter
+        case let .HalftoneEffect(subfilter):
             return subfilter
         case let .Sharpen(subfilter):
             return subfilter

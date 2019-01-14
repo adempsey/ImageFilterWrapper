@@ -11,6 +11,8 @@
 		8D285A6B21EBCE2100DC1EC7 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D285A6A21EBCE2100DC1EC7 /* Gradient.swift */; };
 		8D285A6E21EBD8DC00DC1EC7 /* ProducerGradientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D285A6D21EBD8DC00DC1EC7 /* ProducerGradientTests.swift */; };
 		8D285A7021EBD92800DC1EC7 /* ProducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D285A6F21EBD92800DC1EC7 /* ProducerTests.swift */; };
+		8D285A7221EBDE1B00DC1EC7 /* HalftoneEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D285A7121EBDE1B00DC1EC7 /* HalftoneEffectFilter.swift */; };
+		8D285A7421EBE6D100DC1EC7 /* FilterHalftoneEffectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D285A7321EBE6D100DC1EC7 /* FilterHalftoneEffectTests.swift */; };
 		8D3ACA741E3726FA00B3A482 /* CoreImageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3ACA731E3726FA00B3A482 /* CoreImageConvertible.swift */; };
 		8D400BD31E38614000EB05D6 /* ColorEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */; };
 		8D5921031E3847AE00844FD1 /* ColorAdjustmentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */; };
@@ -54,6 +56,8 @@
 		8D285A6A21EBCE2100DC1EC7 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		8D285A6D21EBD8DC00DC1EC7 /* ProducerGradientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerGradientTests.swift; sourceTree = "<group>"; };
 		8D285A6F21EBD92800DC1EC7 /* ProducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerTests.swift; sourceTree = "<group>"; };
+		8D285A7121EBDE1B00DC1EC7 /* HalftoneEffectFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalftoneEffectFilter.swift; sourceTree = "<group>"; };
+		8D285A7321EBE6D100DC1EC7 /* FilterHalftoneEffectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHalftoneEffectTests.swift; sourceTree = "<group>"; };
 		8D3ACA731E3726FA00B3A482 /* CoreImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreImageConvertible.swift; path = Source/CoreImageConvertible.swift; sourceTree = "<group>"; };
 		8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorEffectFilter.swift; sourceTree = "<group>"; };
 		8D5921021E3847AD00844FD1 /* ColorAdjustmentFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAdjustmentFilter.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			children = (
 				8DB6261D21E82148005A981F /* FilterColorAdjustmentTests.swift */,
 				8DE7139521E691C900383E16 /* FilterDistortionEffectTests.swift */,
+				8D285A7321EBE6D100DC1EC7 /* FilterHalftoneEffectTests.swift */,
 				8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */,
 				8D624C6721E550950053F895 /* FilterBlurTests.swift */,
 				8D624C7121E569EF0053F895 /* FilterTests.swift */,
@@ -210,6 +215,7 @@
 				8D400BD21E38614000EB05D6 /* ColorEffectFilter.swift */,
 				8DE34FA91E39C55100608DCB /* CompositeOperationFilter.swift */,
 				8DE34FAB1E39D04A00608DCB /* DistortionEffectFilter.swift */,
+				8D285A7121EBDE1B00DC1EC7 /* HalftoneEffectFilter.swift */,
 				8D5B9EEF1E37401F00767C2A /* SharpenFilter.swift */,
 				8DE4F9CE1E3D4E3000700289 /* StylizeFilter.swift */,
 				8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */,
@@ -340,6 +346,7 @@
 				8DD5C94921E4574F001234A0 /* CoreImageConvertibleTests.swift in Sources */,
 				8DE7139621E691C900383E16 /* FilterDistortionEffectTests.swift in Sources */,
 				8D285A7021EBD92800DC1EC7 /* ProducerTests.swift in Sources */,
+				8D285A7421EBE6D100DC1EC7 /* FilterHalftoneEffectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +371,7 @@
 				8D285A6821EBCDD700DC1EC7 /* Producer.swift in Sources */,
 				8DD83DC11E33FA4B00395402 /* BlurFilter.swift in Sources */,
 				8DD83DC71E3473F300395402 /* Image.swift in Sources */,
+				8D285A7221EBDE1B00DC1EC7 /* HalftoneEffectFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
