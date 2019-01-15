@@ -15,7 +15,7 @@ class ProducerTests: XCTestCase {
         let producedImg = UIImage.generate(producer, size: CGSize(width: 50, height: 50))
         let producedImgHash = producedImg.md5()
 
-        XCTAssertEqual(checksum, producedImgHash, "Generator produced unknown checksum")
+        XCTAssertEqual(checksum, producedImgHash, "Produced unknown checksum")
     }
     
 }

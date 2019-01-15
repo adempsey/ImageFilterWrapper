@@ -23,6 +23,8 @@
 		8D624C7221E569EF0053F895 /* FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D624C7121E569EF0053F895 /* FilterTests.swift */; };
 		8D624C7421E64CF00053F895 /* giraffe.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D624C7321E64CF00053F895 /* giraffe.png */; };
 		8D95AAE421EBCAE600608B6B /* CIFilter+IFWAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95AAE321EBCAE600608B6B /* CIFilter+IFWAdditions.swift */; };
+		8DB4BAA321ED3ACD009B4D97 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4BAA221ED3ACD009B4D97 /* Generator.swift */; };
+		8DB4BAA521ED45F6009B4D97 /* ProducerGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4BAA421ED45F6009B4D97 /* ProducerGeneratorTests.swift */; };
 		8DB6261E21E82148005A981F /* FilterColorAdjustmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6261D21E82148005A981F /* FilterColorAdjustmentTests.swift */; };
 		8DC2734E21E6704F00B0BE35 /* FilterSharpenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */; };
 		8DD44B261E4ADF3B0057A112 /* TileEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */; };
@@ -69,6 +71,8 @@
 		8D624C7121E569EF0053F895 /* FilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTests.swift; sourceTree = "<group>"; };
 		8D624C7321E64CF00053F895 /* giraffe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffe.png; sourceTree = "<group>"; };
 		8D95AAE321EBCAE600608B6B /* CIFilter+IFWAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CIFilter+IFWAdditions.swift"; path = "Source/CIFilter+IFWAdditions.swift"; sourceTree = "<group>"; };
+		8DB4BAA221ED3ACD009B4D97 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		8DB4BAA421ED45F6009B4D97 /* ProducerGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerGeneratorTests.swift; sourceTree = "<group>"; };
 		8DB6261D21E82148005A981F /* FilterColorAdjustmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterColorAdjustmentTests.swift; sourceTree = "<group>"; };
 		8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSharpenTests.swift; sourceTree = "<group>"; };
 		8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileEffectFilter.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		8D285A6921EBCE0F00DC1EC7 /* Subproducers */ = {
 			isa = PBXGroup;
 			children = (
+				8DB4BAA221ED3ACD009B4D97 /* Generator.swift */,
 				8D285A6A21EBCE2100DC1EC7 /* Gradient.swift */,
 			);
 			path = Subproducers;
@@ -120,6 +125,7 @@
 		8D285A6C21EBD8C600DC1EC7 /* ProducerTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DB4BAA421ED45F6009B4D97 /* ProducerGeneratorTests.swift */,
 				8D285A6D21EBD8DC00DC1EC7 /* ProducerGradientTests.swift */,
 				8D285A6F21EBD92800DC1EC7 /* ProducerTests.swift */,
 			);
@@ -347,6 +353,7 @@
 				8DE7139621E691C900383E16 /* FilterDistortionEffectTests.swift in Sources */,
 				8D285A7021EBD92800DC1EC7 /* ProducerTests.swift in Sources */,
 				8D285A7421EBE6D100DC1EC7 /* FilterHalftoneEffectTests.swift in Sources */,
+				8DB4BAA521ED45F6009B4D97 /* ProducerGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +374,7 @@
 				8DD44B261E4ADF3B0057A112 /* TileEffectFilter.swift in Sources */,
 				8D400BD31E38614000EB05D6 /* ColorEffectFilter.swift in Sources */,
 				8DE34FAC1E39D04A00608DCB /* DistortionEffectFilter.swift in Sources */,
+				8DB4BAA321ED3ACD009B4D97 /* Generator.swift in Sources */,
 				8D5B9EF01E37401F00767C2A /* SharpenFilter.swift in Sources */,
 				8D285A6821EBCDD700DC1EC7 /* Producer.swift in Sources */,
 				8DD83DC11E33FA4B00395402 /* BlurFilter.swift in Sources */,
