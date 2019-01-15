@@ -25,6 +25,7 @@
 		8D95AAE421EBCAE600608B6B /* CIFilter+IFWAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95AAE321EBCAE600608B6B /* CIFilter+IFWAdditions.swift */; };
 		8DB4BAA321ED3ACD009B4D97 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4BAA221ED3ACD009B4D97 /* Generator.swift */; };
 		8DB4BAA521ED45F6009B4D97 /* ProducerGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4BAA421ED45F6009B4D97 /* ProducerGeneratorTests.swift */; };
+		8DB4BAA721ED931D009B4D97 /* FilterCompositeOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4BAA621ED931D009B4D97 /* FilterCompositeOperationTests.swift */; };
 		8DB6261E21E82148005A981F /* FilterColorAdjustmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6261D21E82148005A981F /* FilterColorAdjustmentTests.swift */; };
 		8DC2734E21E6704F00B0BE35 /* FilterSharpenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */; };
 		8DD44B261E4ADF3B0057A112 /* TileEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */; };
@@ -73,6 +74,7 @@
 		8D95AAE321EBCAE600608B6B /* CIFilter+IFWAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CIFilter+IFWAdditions.swift"; path = "Source/CIFilter+IFWAdditions.swift"; sourceTree = "<group>"; };
 		8DB4BAA221ED3ACD009B4D97 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		8DB4BAA421ED45F6009B4D97 /* ProducerGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerGeneratorTests.swift; sourceTree = "<group>"; };
+		8DB4BAA621ED931D009B4D97 /* FilterCompositeOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCompositeOperationTests.swift; sourceTree = "<group>"; };
 		8DB6261D21E82148005A981F /* FilterColorAdjustmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterColorAdjustmentTests.swift; sourceTree = "<group>"; };
 		8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSharpenTests.swift; sourceTree = "<group>"; };
 		8DD44B251E4ADF3B0057A112 /* TileEffectFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileEffectFilter.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB6261D21E82148005A981F /* FilterColorAdjustmentTests.swift */,
+				8DB4BAA621ED931D009B4D97 /* FilterCompositeOperationTests.swift */,
 				8DE7139521E691C900383E16 /* FilterDistortionEffectTests.swift */,
 				8D285A7321EBE6D100DC1EC7 /* FilterHalftoneEffectTests.swift */,
 				8DC2734D21E6704F00B0BE35 /* FilterSharpenTests.swift */,
@@ -354,6 +357,7 @@
 				8D285A7021EBD92800DC1EC7 /* ProducerTests.swift in Sources */,
 				8D285A7421EBE6D100DC1EC7 /* FilterHalftoneEffectTests.swift in Sources */,
 				8DB4BAA521ED45F6009B4D97 /* ProducerGeneratorTests.swift in Sources */,
+				8DB4BAA721ED931D009B4D97 /* FilterCompositeOperationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
