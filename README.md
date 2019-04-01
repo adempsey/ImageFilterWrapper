@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/adempsey/ImageFilterWrapper.svg?branch=master)](https://travis-ci.com/adempsey/ImageFilterWrapper)
 ImageFilterWrapper
 =======================
+[![Build Status](https://travis-ci.com/adempsey/ImageFilterWrapper.svg?branch=master)](https://travis-ci.com/adempsey/ImageFilterWrapper)
 
 ![Banner](banner.png)
 
